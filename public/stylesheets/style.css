@@ -4,25 +4,26 @@
 
 body, html {
   height: 100%;
-  padding: 0;
+  padding: 0px;
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-color: rgb(184, 184, 184);
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
-  font-weight: bold;
+  color: lightskyblue;
+  padding: 20px;
   transition: color .1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color:mediumblue;
 }
 
 button {
-  background-color: #225ca3;
+  background-color:lightskyblue;
   border: 0;
   padding: 1%;
   color: white;
@@ -33,7 +34,7 @@ button {
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: mediumblue;
 }
 
 .post-list {
@@ -49,7 +50,7 @@ textarea, input {
 
 textarea:focus, input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid mediumblue;
 }
 
 textarea {
@@ -75,15 +76,22 @@ form label {
 }
 
 header {
+  background-color:darkslategray ;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
+
 }
 
 header h1 {
+  font-size: 2em;
+}
+
+h3 {
   font-size: 1em;
+  font-weight: normal;
 }
 
 main {
@@ -97,7 +105,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: white;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -106,7 +114,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: mediumblue;
 }
 
 .delete-post-btn {
@@ -120,13 +128,24 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
+  border: darkslategray;
+  border-style: solid;
+  width: 90%;
+
 }
 
 .post .title span {
   font-style: italic;
   font-size: 90%;
-  color: #7d7d7d;
+
 }
+
+.title{
+  background-color: darkslategray;
+  color: #ffffff; 
+}
+
+
 
 .edit-link {
   display: block;
@@ -167,6 +186,16 @@ main {
 
 .edit-post-form {
   margin-bottom: 5%;
+}
+
+.time{
+  font-size: 75%;
+  padding: 10px;  
+}
+
+.content{
+  background-color: white;
+  color: black;   
 }
 
 footer {
