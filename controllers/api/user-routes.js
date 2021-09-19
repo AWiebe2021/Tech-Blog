@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, Vote } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -76,14 +76,14 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'lernantino', password: 'password1234'}
   User.findOne({
     where: {
-      email: req.body.email
+      username: req.body.username
     }
   }).then(dbUserData => {
     if (!dbUserData) {
-      res.status(400).json({ message: 'No user with that email address!' });
+      res.status(400).json({ message: 'No user with that username!' });
       return;
     }
 
@@ -98,6 +98,8 @@ router.post('/login', (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
+      console.log(`Creating a session with ID: ${req.session.id}`);
+      console.log(`Your session expires at ${req.session.cookie.expires}`)
   
       res.json({ user: dbUserData, message: 'You are now logged in!' });
     });
