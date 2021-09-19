@@ -12,7 +12,10 @@
          <input type = "submit" value = "submit" /> --}}
 
       <input name="post-title" type="text" size="58" value="{{post.title}}" />
-      <span>({{post.post_content}})</span>
+      {{!-- <span>({{post.post_content}})</span> --}}
+      <div>
+        <textarea name="post_content">{{post.post_content}}</textarea>
+      </div>
     </div>
     <div>
       {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}} --}}
@@ -24,7 +27,7 @@
   </form>
 </article>
 
-<form class="comment-form">
+{{!-- <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
@@ -32,9 +35,9 @@
   <div>
     <button type="submit">add comment</button>
   </div>
-</form>
+</form> --}}
 
-{{> comments post.comments}}
+{{!-- {{> comments post.comments}} --}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
