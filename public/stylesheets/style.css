@@ -92,6 +92,7 @@ header h1 {
 h3 {
   font-size: 1em;
   font-weight: normal;
+  padding: 10px;
 }
 
 main {
@@ -130,7 +131,7 @@ main {
   line-height: 150%;
   border: darkslategray;
   border-style: solid;
-  width: 90%;
+  width: 100%;
 
 }
 
